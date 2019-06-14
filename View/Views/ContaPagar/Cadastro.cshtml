@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cadastro</title>
+</head>
+<body>
+    <div> 
+        <form action="/contapagar/store" method="post">
+            <label for="campo-nome">Nome</label>
+            <input type="text" name="nome" id="campo-nome" />
+
+            <label for="campo-valor">Valor</label>
+            <input type="number" name="valor" id="campo-valor" />
+
+            <label for="campo-tipo">Tipo</label>
+            <input type="text" name="tipo" id="campo-tipo" />
+
+            <label for="campo-descricao">Descricao</label>
+            <input type="text" name="descricao" id="campo-descricao" />
+
+            <label for="campo-status">Status</label>
+            <select name="status">
+                <option value="Pendente">Pendente</option>
+                <option value="Atrasada">Atrasada</option>
+                <option value="Paga">Paga</option>
+            </select>
+
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+</body>
+</html>

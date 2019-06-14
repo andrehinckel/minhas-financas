@@ -22,7 +22,7 @@ namespace Repository
         {
             SqlCommand command = connection.conectar();
             command.CommandText = @"INSERT INTO contas_pagar (nome, valor, tipo, descricao, status)
-OUTPUT INSERTED.ID VALUES(@NOME, @VALOR, @DESCRICAO, @STATUS)";
+OUTPUT INSERTED.ID VALUES(@NOME, @VALOR, @TIPO, @DESCRICAO, @STATUS)";
             command.Parameters.AddWithValue("@NOME", contaPagar.Nome);
             command.Parameters.AddWithValue("@VALOR", contaPagar.Valor);
             command.Parameters.AddWithValue("@TIPO", contaPagar.Tipo);
@@ -79,7 +79,7 @@ tipo = @TIPO, descricao = @DESCRICAO, status = @STATUS WHERE id = @ID";
             contaPagar.Valor = Convert.ToDecimal(row["valor"]);
             contaPagar.Tipo = row["tipo"].ToString();
             contaPagar.Descricao = row["descricao"].ToString();
-            contaPagar.Status = Convert.ToBoolean(row["status"]);
+            contaPagar.Status = row["status"].ToString(); ;
             return contaPagar;
         }
 
@@ -102,7 +102,7 @@ tipo = @TIPO, descricao = @DESCRICAO, status = @STATUS WHERE id = @ID";
                 contaPagar.Valor = Convert.ToDecimal(row["valor"]);
                 contaPagar.Tipo = row["tipo"].ToString();
                 contaPagar.Descricao = row["descricao"].ToString();
-                contaPagar.Status = Convert.ToBoolean(row["status"]);
+                contaPagar.Status = row["status"].ToString();
                 contasPagar.Add(contaPagar);
             }
             return contasPagar;

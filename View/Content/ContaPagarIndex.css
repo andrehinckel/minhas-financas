@@ -1,0 +1,9 @@
+﻿.table {
+    width: 100%;
+    background-color: blueviolet;
+    color: white;
+}
+
+th {
+    padding-left: 10px;
+}

@@ -51,7 +51,7 @@ namespace View.Controllers
             ContaPagarRepository repository = new ContaPagarRepository();
             ContaPagar contaPagar = repository.ObterPeloId(id);
             ViewBag.ContaPagar = contaPagar;
-            return RedirectToAction("Index");
+            return View();
         }
 
         public ActionResult Update(int id, string nome, decimal valor, string tipo, string descricao, string status)

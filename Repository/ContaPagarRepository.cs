@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class ContaPagarRepository : IRepository
+    public class ContaPagarRepository : IContaPagarRepository
     {
         private Conexao connection;
 

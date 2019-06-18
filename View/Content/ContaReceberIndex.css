@@ -1,0 +1,8 @@
+﻿.table {
+    width: 100%;
+    background-color: seagreen;
+    color: black;
+}
+thead{
+    padding-right: 50px;
+}

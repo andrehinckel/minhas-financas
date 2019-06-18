@@ -42,10 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientePessoaFisicaRepository.cs" />
+    <Compile Include="ClientePessoaJuridicaRepository.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="ContaPagarRepository.cs" />
     <Compile Include="ContaReceberRepository.cs" />
     <Compile Include="IClientePessoaFisicaRepository.cs" />
+    <Compile Include="IClientePessoaJuridica.cs" />
     <Compile Include="IContaPagarRepository.cs" />
     <Compile Include="IContaReceberRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Editar</title>
+</head>
+<body>
+    <form action="/clientepessoafisica/update" method="post">
+        <label for="campo-nome">Nome</label>
+        <input type="text" name="nome" id="campo-nome" value="@ViewBag.ClientePessoaFisica.Nome" />
+
+        <label for="campo-cpf">CPF</label>
+        <input type="text" name="cpf" id="campo-cpf" value="@ViewBag.ClientePessoaFisica.CPF" />
+
+        <label for="campo-data-nascimento">Data Nascimento</label>
+        <input type="date" name="dataNascimento" id="campo-data-nascimento" value="@ViewBag.ClientePessoaFisica.DataNascimento.ToString()" />
+
+        <label for="campo-rg">RG</label>
+        <input type="text" name="rg" id="campo-rg" value="@ViewBag.ClientePessoaFisica.RG" />
+
+        <label>Sexo</label>
+
+        @if (ViewBag.ClientePessoaFisica.Sexo == "Feminino")
+        {
+            <input type="radio" name="sexo" id="campo-sexo-feminino" value="@ViewBag.ClientePessoaFisica.Sexo" checked="checked" />
+        }
+        else
+        {
+            <input type="radio" name="sexo" id="campo-sexo-feminino" value="@ViewBag.ClientePessoaFisica.Sexo" />
+        }
+        <label for="campo-sexo-feminino">Feminino</label>
+
+        @if(ViewBag.ClientePessoaFisica.Sexo == "Masculino")
+        {
+            <input type="radio" name="sexo" id="campo-sexo-masculino" value="@ViewBag.ClientePessoaFisica.Sexo" checked="checked" />
+        }
+        else
+        {
+            <input type="radio" name="sexo" id="campo-sexo-masculino" value="@ViewBag.ClientePessoaFisica.Sexo" />
+        }
+        <label for="campo-sexo-masculino">Masculino</label>
+
+        <input type="hidden" name="id" value="@ViewBag.ClientePessoaFisica.Id" />
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

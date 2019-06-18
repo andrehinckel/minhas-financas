@@ -94,14 +94,15 @@ OuTPUT INSERTED.ID VALUES(@NOME, @VALOR, @TIPO, @DESCRICAO, @STATUS)";
         public bool Update(ContaReceber contaReceber)
         {
             SqlCommand command = connection.conectar();
-            command.CommandText = @"UPDATE contas_receber SET nome = @NOME, valor = @VALOR, tipo = @TIPO, descricao = @DESCRICAO, status = @STATUS WHERE id = @ID";
+            command.CommandText = @"UPDATE contas_receber SET nome = @NOME, valor = @VALOR, 
+tipo = @TIPO, descricao = @DESCRICAO, status = @STATUS WHERE id = @ID";
             command.Parameters.AddWithValue("@NOME", contaReceber.Nome);
             command.Parameters.AddWithValue("@VALOR", contaReceber.Valor);
             command.Parameters.AddWithValue("@TIPO", contaReceber.Tipo);
             command.Parameters.AddWithValue("@DESCRICAO", contaReceber.Descricao);
             command.Parameters.AddWithValue("@STATUS", contaReceber.Status);
             command.Parameters.AddWithValue("@ID", contaReceber.Id);
-            int quantidadeAfetada = command.ExecuteNonQuery();
+            int quantidadeAfetada = Convert.ToInt32(command.ExecuteNonQuery());
             command.Connection.Close();
             return quantidadeAfetada == 1;
         }

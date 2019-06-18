@@ -88,6 +88,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\ClientePessoaFisica.css" />
     <Content Include="Content\ContaPagarIndex.css" />
     <Content Include="Content\ContaReceberIndex.css" />
     <Content Include="Global.asax" />
@@ -95,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ClientePessoaFisicaController.cs" />
     <Compile Include="Controllers\ContaPagarController.cs" />
     <Compile Include="Controllers\ContaReceberController.cs" />
     <Compile Include="Global.asax.cs">
@@ -111,6 +113,9 @@
     <Content Include="Views\ContaReceber\Index.cshtml" />
     <Content Include="Views\ContaReceber\Cadastro.cshtml" />
     <Content Include="Views\ContaReceber\Editar.cshtml" />
+    <Content Include="Views\ClientePessoaFisica\Index.cshtml" />
+    <Content Include="Views\ClientePessoaFisica\Cadastro.cshtml" />
+    <Content Include="Views\ClientePessoaFisica\Editar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

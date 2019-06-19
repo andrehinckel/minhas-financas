@@ -45,6 +45,7 @@
     <Compile Include="ClientePessoaJuridica.cs" />
     <Compile Include="ContaPagar.cs" />
     <Compile Include="ContaReceber.cs" />
+    <Compile Include="Endereco.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

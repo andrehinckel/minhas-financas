@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/Content/ClientePessoaJuridica.css" />
+</head>
+<body>
+    <div> 
+        <h1>Lista de Clientes(Pessoa Jurídica)</h1>
+        <a href="/clientepessoajuridica/cadastro">Novo Cliente(Pessoa Jurídica)</a>
+        <form action="/clientepessoajuridica/index" method="get">
+            <label for="campo-pesquisa">Pesquisa</label>
+            <input type="text" name="pesquisa" id="campo-pesquisa" />
+        </form>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>Id</tr>
+            <tr>CNPJ</tr>
+            <tr>Razao Social</tr>
+            <tr>Inscrião Estadual</tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < ViewBag.ClientesPessoaJuridica.Count; i++)
+            {
+                <tr>
+                    <td>@ViewBag.ClientesPessoaJuridica[i].Id</td>
+                    <td>@ViewBag.ClientesPessoaJuridica[i].CNPJ</td>
+                    <td>@ViewBag.ClientesPessoaJuridica[i].RazaoSocial</td>
+                    <td>@ViewBag.ClientesPessoaJuridica[i].InscricaoEstadual</td>
+                    <td>
+                        <a href="/clientepessoajuridica/editar?id=@ViewBag.ClientesPessoaJuridica[i].Id">Editar</a>
+                        <a href="/clientepessoajuridica/delete?id=@ViewBag.ClientesPessoaJuridica[i].Id">Apagar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

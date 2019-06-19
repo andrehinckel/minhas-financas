@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/Content/Endereco.css" />
+</head>
+<body>
+    <div> 
+        <h1>Lista de Endereços</h1>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>Id</tr>
+            <tr>Unidade Federativa</tr>
+            <tr>Cidade</tr>
+            <tr>Lougradouro</tr>
+            <tr>CEP</tr>
+            <tr>Numero</tr>
+            <tr>Complemento</tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < ViewBag.Enderecos.Count; i++)
+            {
+            <tr>
+                <td>@ViewBag.Enderecos[i].Id</td>
+                <td>@ViewBag.Enderecos[i].UnidadeFederativa</td>
+                <td>@ViewBag.Enderecos[i].Cidade</td>
+                <td>@ViewBag.Enderecos[i].Logradouro</td>
+                <td>@ViewBag.Enderecos[i].CEP</td>
+                <td>@ViewBag.Enderecos[i].Numero</td>
+                <td>@ViewBag.Enderecos[i].Complemento</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

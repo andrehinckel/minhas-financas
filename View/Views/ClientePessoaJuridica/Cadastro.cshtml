@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cadastro</title>
+</head>
+<body>
+    <div> 
+        <form action="/clientepessoajuridica/store" method="post">
+            <label for="campo-cnpj">CNPJ</label>
+            <input type="text" id="campo-cnpj" name="cnpj" />
+
+            <label for="campo-razao-social">Razão Social</label>
+            <input type="text" name="razaoSocial" id="campo-razao-social" />
+
+            <label for="campo-inscricao-estadual">Inscrição Estadual</label>
+            <input type="text" name="inscricaoEstadual" id="campo-inscricao-estadual" />
+
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+</body>
+</html>

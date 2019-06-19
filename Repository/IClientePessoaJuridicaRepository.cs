@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    interface IClientePessoaJuridica
+    interface IClientePessoaJuridicaRepository
     {
         int Inserir(ClientePessoaJuridica clientePessoaJuridica);
 

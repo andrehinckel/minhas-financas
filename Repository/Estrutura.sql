@@ -25,9 +25,20 @@ CREATE TABLE clientes_pessoa_fisica(
 	rg VARCHAR(15),
 	sexo VARCHAR(30)
 );
+DROP TABLE clientes_pessoa_juridica;
 CREATE TABLE clientes_pessoa_juridica(
 	id INT PRIMARY KEY IDENTITY(1,1),
 	cnpj VARCHAR(50),
 	razao_social VARCHAR(100),
-	inscricao_social VARCHAR(100)
+	inscricao_estadual VARCHAR(100)
+);
+
+CREATE TABLE enderecos(
+	id INT PRIMARY KEY IDENTITY(1,1),
+	unidade_federativa VARCHAR(10),
+	cidade VARCHAR(100),
+	logradouro VARCHAR(100),
+	cep VARCHAR(9),
+	numero INT,
+	complemento VARCHAR(100)
 );

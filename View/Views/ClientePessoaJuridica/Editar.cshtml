@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Editar</title>
+</head>
+<body>
+    <form action="/clientepessoajuridica/update" method="post">
+        <label for="campo-cnpj">CNPJ</label>
+        <input type="text" id="campo-cnpj" name="cnpj" value="@ViewBag.ClientePessoaJuridica.CNPJ" />
+
+        <label for="campo-razao-social">Razão Social</label>
+        <input type="text" name="razaoSocial" id="campo-razao-social" value="@ViewBag.ClientePessoaJuridica.RazaoSocial" />
+
+        <label for="campo-inscricao-estadual">Inscrição Estadual</label>
+        <input type="text" name="inscricaoEstadual" id="campo-inscricao-estadual" value="@ViewBag.ClientePessoaJuridica.InscricaoEstadual" />
+
+        <input type="hidden" name="id" value="@ViewBag.ClientePessoaJuridica.Id" />
+        <button type="submit">Salvar</button>
+
+    </form>
+</body>
+</html>

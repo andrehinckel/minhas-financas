@@ -89,16 +89,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\ClientePessoaFisica.css" />
+    <Content Include="Content\ClientePessoaJuridica.css" />
     <Content Include="Content\ContaPagarIndex.css" />
     <Content Include="Content\ContaReceberIndex.css" />
+    <Content Include="Content\Endereco.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClientePessoaFisicaController.cs" />
+    <Compile Include="Controllers\ClientePessoaJuridicaController.cs" />
     <Compile Include="Controllers\ContaPagarController.cs" />
     <Compile Include="Controllers\ContaReceberController.cs" />
+    <Compile Include="Controllers\EnderecoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -116,6 +120,11 @@
     <Content Include="Views\ClientePessoaFisica\Index.cshtml" />
     <Content Include="Views\ClientePessoaFisica\Cadastro.cshtml" />
     <Content Include="Views\ClientePessoaFisica\Editar.cshtml" />
+    <Content Include="Views\ClientePessoaJuridica\Index.cshtml" />
+    <Content Include="Views\ClientePessoaJuridica\Cadastro.cshtml" />
+    <Content Include="Views\ClientePessoaJuridica\Editar.cshtml" />
+    <Content Include="Views\Endereco\Index.cshtml" />
+    <Content Include="Views\Endereco\Cadastro.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -46,10 +46,12 @@
     <Compile Include="Conexao.cs" />
     <Compile Include="ContaPagarRepository.cs" />
     <Compile Include="ContaReceberRepository.cs" />
+    <Compile Include="EnderecoRepository.cs" />
     <Compile Include="IClientePessoaFisicaRepository.cs" />
-    <Compile Include="IClientePessoaJuridica.cs" />
+    <Compile Include="IClientePessoaJuridicaRepository.cs" />
     <Compile Include="IContaPagarRepository.cs" />
     <Compile Include="IContaReceberRepository.cs" />
+    <Compile Include="IEnderecoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
